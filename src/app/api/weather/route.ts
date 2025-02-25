@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 export async function GET(req: Request) {
 
-    const apiKey = process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY;
+    const apiKey = process.env.NEXT_OPENWEATHER_API_KEY;
 
     const { searchParams } = new URL(req.url);
     const city = searchParams.get("city")
