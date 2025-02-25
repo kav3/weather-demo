@@ -12,7 +12,7 @@ export default function Home() {
   const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
   // default city is the second part of the timezone string
-  const defaultCity = timezone.split("/")[1].replace("_", " ") ?? "Vancouver";
+  const defaultCity = timezone.split("/")[1]?.replace("_", " ") ?? "Vancouver";
 
   const [city, setCity] = useState(defaultCity);
   const [weather, setWeather] = useState<any>(null);
